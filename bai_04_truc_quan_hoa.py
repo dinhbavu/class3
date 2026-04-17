@@ -22,7 +22,7 @@ def create_visualizations(df, analysis_results):
     plt.tight_layout()
     plt.savefig(os.path.join(OUTPUT_DIR, "01_line_cong_suat_theo_gio.png"), dpi=120)
     plt.close()
-    print("[1] ✅ Lưu: 01_line_cong_suat_theo_gio.png")
+    print("[1] ✅ Lưu: 01_Công suất TB theo giờ.png")
 
     # ── Biểu đồ 2: Bar – Công suất TB theo tháng
     tb_thang = df.groupby("Thang")["Global_active_power"].mean()
@@ -38,7 +38,7 @@ def create_visualizations(df, analysis_results):
     plt.tight_layout()
     plt.savefig(os.path.join(OUTPUT_DIR, "02_bar_cong_suat_theo_thang.png"), dpi=120)
     plt.close()
-    print("[2] ✅ Lưu: 02_bar_cong_suat_theo_thang.png")
+    print("[2] ✅ Lưu: 02_Công suất TB theo tháng.png")
 
     # ── Biểu đồ 3: Barh – Mức tiêu thụ
     muc_count = df["Muc_tieu_thu"].value_counts()
@@ -50,7 +50,7 @@ def create_visualizations(df, analysis_results):
     plt.tight_layout()
     plt.savefig(os.path.join(OUTPUT_DIR, "03_barh_muc_tieu_thu.png"), dpi=120)
     plt.close()
-    print("[3] ✅ Lưu: 03_barh_muc_tieu_thu.png")
+    print("[3] ✅ Lưu: 03_Phân bố mức tiêu thụ điện.png")
 
     # ── Biểu đồ 4: Histogram – Phân phối công suất
     fig, ax = plt.subplots(figsize=(9, 4))
@@ -66,7 +66,7 @@ def create_visualizations(df, analysis_results):
     plt.tight_layout()
     plt.savefig(os.path.join(OUTPUT_DIR, "04_histogram_phan_phoi.png"), dpi=120)
     plt.close()
-    print("[4] ✅ Lưu: 04_histogram_phan_phoi.png")
+    print("[4] ✅ Lưu: 04_Phân phối công suất tiêu thụ.png")
 
     # ── Biểu đồ 5: Scatter – Công suất vs Điện áp
     sample = df.sample(min(3000, len(df)), random_state=42)
@@ -80,7 +80,7 @@ def create_visualizations(df, analysis_results):
     plt.tight_layout()
     plt.savefig(os.path.join(OUTPUT_DIR, "05_scatter_voltage_power.png"), dpi=120)
     plt.close()
-    print("[5] ✅ Lưu: 05_scatter_voltage_power.png")
+    print("[5] ✅ Lưu: 05_Điện áp vs Công suất (màu = giờ).png")
 
     # ── Biểu đồ 6: Subplot – Tổng hợp 4 chỉ số
     fig, axes = plt.subplots(2, 2, figsize=(13, 8))
@@ -102,7 +102,7 @@ def create_visualizations(df, analysis_results):
     plt.tight_layout()
     plt.savefig(os.path.join(OUTPUT_DIR, "06_subplot_4_chi_so.png"), dpi=120)
     plt.close()
-    print("[6] ✅ Lưu: 06_subplot_4_chi_so.png")
+    print("[6] ✅ Lưu: 06_Tổng hợp chỉ số theo giờ trong ngày.png")
 
     # ── Biểu đồ 7: Heatmap Pivot – Giờ × Tháng
     fig, ax = plt.subplots(figsize=(12, 7))
@@ -125,7 +125,7 @@ def create_visualizations(df, analysis_results):
     plt.tight_layout()
     plt.savefig(os.path.join(OUTPUT_DIR, "07_heatmap_gio_thang.png"), dpi=120)
     plt.close()
-    print("[7] ✅ Lưu: 07_heatmap_gio_thang.png")
+    print("[7] ✅ Lưu: 07_Công suất TB theo Giờ × Tháng.png")
 
 if __name__ == "__main__":
     from bai_02_xu_ly_du_lieu import load_data, clean_data, engineering_data
