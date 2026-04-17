@@ -44,5 +44,5 @@ Phần 7 – Lưu Kết Quả
 
 
 Bộ Dữ Liệu
-https://www.kaggle.com/datasets/uciml/electric-power-consumption-data-set?utm_source=chatgpt.com
+https://www.kaggle.com/datasets/uciml/electric-power-consumption-data-set
 
